@@ -1,69 +1,17 @@
-# React + TypeScript + Vite
+# Five Ways to Fetch Data in React
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This template provides a minimal setup to get fetch data in React.
 
-Currently, two official plugins are available:
+## The ways to fetch data in React
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+This project demonstrates five different ways to fetch data in React:
 
-## Expanding the ESLint configuration
+1. **Using the Fetch API**: This is the most basic way to fetch data in React. It involves using the Fetch API to make a request to a server and retrieve the data.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+2. **Using Axios**: Axios is a popular HTTP client library that provides a convenient way to make requests to a server. It is similar to the Fetch API, but provides a more convenient API.
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+3. **Using the custom useFetch Hook**: The useFetch hook is a custom hook that encapsulates the logic of fetching data from a server. It is not as convenient as the other methods, but it provides a lot of flexibility.
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+4. **Using the useSWR Hook**: The useSWR hook is a React hook provided by the SWR library. It is a wrapper around the Fetch API that provides a convenient way to fetch data in React applications. It also provides a number of features such as caching and error handling.
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+5. **Using the useQuery Hook from React Query**: The useQuery hook is a React hook provided by the React Query library. It is a wrapper around the Fetch API that provides a convenient way to fetch data in React applications. It also provides a number of features such as caching and error handling.
